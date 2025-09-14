@@ -1,0 +1,19 @@
+{
+    "name": "CmrUnityGameFramework.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:5b7ef2c4ef59c084a83db3239f06ec17",
+        "GUID:96f47e21f1961aa46a330013e094aa57"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
