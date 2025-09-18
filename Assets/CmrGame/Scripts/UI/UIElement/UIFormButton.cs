@@ -28,9 +28,9 @@ namespace CmrGame
         {
             Normal, Hover, Highlighted, Pressed
         }
-        private AnimationState _state = AnimationState.Normal;
+        private AnimationState m_state = AnimationState.Normal;
 
-        // 由外部 InputManager 决定
+        // 由外部 InputManager 决定，这里暂时写这里。
         public InputMode CurrentInputMode { get; set; } = InputMode.KeyboardController;
 
         #region IFormSelectable
@@ -70,7 +70,7 @@ namespace CmrGame
             if (CurrentInputMode == InputMode.Mouse)
             {
                 // 鼠标退出不触发 Navigator Deselect
-                if (_state == AnimationState.Hover)
+                if (m_state == AnimationState.Hover)
                     SetAnimationState(AnimationState.Normal);
             }
         }
@@ -108,8 +108,8 @@ namespace CmrGame
         // 状态切换统一处理动画
         private void SetAnimationState(AnimationState state)
         {
-            _state = state;
-            switch (_state)
+            m_state = state;
+            switch (m_state)
             {
                 case AnimationState.Normal:
                     // 恢复默认
@@ -122,7 +122,7 @@ namespace CmrGame
                     // 按下动画
                     break;
             }
-            Debug.Log($"{Label} -> {_state}");
+            Debug.Log($"{Label} -> {m_state}");
         }
     }
 
