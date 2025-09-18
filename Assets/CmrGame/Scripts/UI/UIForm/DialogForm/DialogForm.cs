@@ -7,27 +7,12 @@ namespace CmrGame
 {
     public class DialogForm : UIFormLogic
     {
-        [SerializeField]
-        private Text m_TitleText = null;
-
-        [SerializeField]
-        private Text m_MessageText = null;
-
-        [SerializeField]
-        private GameObject[] m_ModeObjects = null;
-
-        [SerializeField]
-        private Text[] m_ConfirmTexts = null;
-
-        [SerializeField]
-        private Text[] m_CancelTexts = null;
-
-        [SerializeField]
-        private Text[] m_OtherTexts = null;
+        [SerializeField]private DialogFormView View;
 
         private int m_DialogMode = 1;
         private bool m_PauseGame = false;
         private object m_UserData = null;
+
         private GameFrameworkAction<object> m_OnClickConfirm = null;
         private GameFrameworkAction<object> m_OnClickCancel = null;
         private GameFrameworkAction<object> m_OnClickOther = null;
@@ -99,8 +84,8 @@ namespace CmrGame
             m_DialogMode = dialogParams.Mode;
             RefreshDialogMode();
 
-            m_TitleText.text = dialogParams.Title;
-            m_MessageText.text = dialogParams.Message;
+            View.m_TitleText.text = dialogParams.Title;
+            View.m_MessageText.text = dialogParams.Message;
 
             m_PauseGame = dialogParams.PauseGame;
             RefreshPauseGame();
@@ -124,8 +109,8 @@ namespace CmrGame
             }
 
             m_DialogMode = 1;
-            m_TitleText.text = string.Empty;
-            m_MessageText.text = string.Empty;
+            View.m_TitleText.text = string.Empty;
+            View.m_MessageText.text = string.Empty;
             m_PauseGame = false;
             m_UserData = null;
 
@@ -143,9 +128,9 @@ namespace CmrGame
 
         private void RefreshDialogMode()
         {
-            for (int i = 1; i <= m_ModeObjects.Length; i++)
+            for (int i = 1; i <= View.m_ModeObjects.Length; i++)
             {
-                m_ModeObjects[i - 1].SetActive(i == m_DialogMode);
+                View.m_ModeObjects[i - 1].SetActive(i == m_DialogMode);
             }
         }
 
@@ -164,9 +149,9 @@ namespace CmrGame
                 confirmText = GFEntry.Localization.GetString("Dialog.ConfirmButton");
             }
 
-            for (int i = 0; i < m_ConfirmTexts.Length; i++)
+            for (int i = 0; i < View.m_ConfirmTexts.Length; i++)
             {
-                m_ConfirmTexts[i].text = confirmText;
+                View.m_ConfirmTexts[i].text = confirmText;
             }
         }
 
@@ -177,9 +162,9 @@ namespace CmrGame
                 cancelText = GFEntry.Localization.GetString("Dialog.CancelButton");
             }
 
-            for (int i = 0; i < m_CancelTexts.Length; i++)
+            for (int i = 0; i < View.m_CancelTexts.Length; i++)
             {
-                m_CancelTexts[i].text = cancelText;
+                View.m_CancelTexts[i].text = cancelText;
             }
         }
 
@@ -190,9 +175,9 @@ namespace CmrGame
                 otherText = GFEntry.Localization.GetString("Dialog.OtherButton");
             }
 
-            for (int i = 0; i < m_OtherTexts.Length; i++)
+            for (int i = 0; i < View.m_OtherTexts.Length; i++)
             {
-                m_OtherTexts[i].text = otherText;
+                View.m_OtherTexts[i].text = otherText;
             }
         }
     }
