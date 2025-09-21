@@ -16,92 +16,77 @@ namespace CmrGame
         Mouse,
         Touch
     }
-    public class UIFormButton : MonoBehaviour, IUIFormSelectable,
-        IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler,
+    public class UIFormButton : UIFormElement, IUIFormSelectable,
+        IPointerEnterHandler, IPointerExitHandler,
         IPointerDownHandler, IPointerUpHandler
     {
-        public string Label;
         public System.Action OnClicked;
+        [SerializeField] private bool m_Interactable = true;
 
         // 当前状态
         private enum AnimationState
         {
-            Normal, Hover, Highlighted, Pressed
+            Normal, Highlighted, Pressed
         }
         private AnimationState m_state = AnimationState.Normal;
 
-        // 由外部 InputManager 决定，这里暂时写这里。
-        public InputMode CurrentInputMode { get; set; } = InputMode.KeyboardController;
+
+        public InputMode GetInputMode()
+        {
+            return InputMode.Mouse;
+        }
 
         #region IFormSelectable
         public void OnSelect()
         {
-            if (CurrentInputMode != InputMode.Mouse && CurrentInputMode != InputMode.Touch)
-            {
-                SetAnimationState(AnimationState.Highlighted);
-            }
+            //不用考虑鼠标是否要触发OnSelect，因为OnSelect只有在上级管理的时候分发焦点时才会触发
+            SetAnimationState(AnimationState.Highlighted);
         }
 
         public void OnDeselect()
         {
-            if (CurrentInputMode != InputMode.Mouse && CurrentInputMode != InputMode.Touch)
-            {
-                SetAnimationState(AnimationState.Normal);
-            }
+            SetAnimationState(AnimationState.Normal);
         }
 
         public void OnConfirm()
         {
             OnClicked?.Invoke();
+            //CYJTodo:感觉在这里去设置焦点不太合适
+            //如果是鼠标或触控，则需要额外将当前控件设置为焦点
+            if (GetInputMode() != InputMode.KeyboardController)
+            {
+                //CYJTodo:告知Form设置焦点。
+            }
         }
         #endregion
 
         #region Mouse
         public void OnPointerEnter(PointerEventData eventData)
         {
-            if (CurrentInputMode == InputMode.Mouse)
-            {
-                SetAnimationState(AnimationState.Hover);
-            }
+            SetAnimationState(AnimationState.Highlighted);
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
-            if (CurrentInputMode == InputMode.Mouse)
-            {
-                // 鼠标退出不触发 Navigator Deselect
-                if (m_state == AnimationState.Hover)
-                    SetAnimationState(AnimationState.Normal);
-            }
+            SetAnimationState(AnimationState.Normal);
         }
 
-        public void OnPointerClick(PointerEventData eventData)
-        {
-            if (CurrentInputMode == InputMode.Mouse)
-            {
-                OnConfirm();
-                // 可以选择是否触发 Navigator 的 OnSelect，这里不自动触发
 
-            }
-        }
         #endregion
 
-        #region Touch
+        #region Click
         public void OnPointerDown(PointerEventData eventData)
         {
-            if (CurrentInputMode == InputMode.Touch)
-            {
-                SetAnimationState(AnimationState.Pressed);
-            }
+            //不只是触控要处理，鼠标和控制器也需要有按下的动画。
+            SetAnimationState(AnimationState.Pressed);
         }
 
         public void OnPointerUp(PointerEventData eventData)
         {
-            if (CurrentInputMode == InputMode.Touch)
-            {
+            InputMode mode = GetInputMode();
+            if(mode != InputMode.Mouse) 
                 SetAnimationState(AnimationState.Normal);
-                OnConfirm();
-            }
+            OnConfirm();
         }
         #endregion
 
@@ -114,7 +99,6 @@ namespace CmrGame
                 case AnimationState.Normal:
                     // 恢复默认
                     break;
-                case AnimationState.Hover:
                 case AnimationState.Highlighted:
                     // 高亮动画
                     break;
@@ -122,7 +106,6 @@ namespace CmrGame
                     // 按下动画
                     break;
             }
-            Debug.Log($"{Label} -> {m_state}");
         }
     }
 

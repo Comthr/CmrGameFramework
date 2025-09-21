@@ -52,7 +52,7 @@ namespace CmrGame
             sb.AppendLine("using UnityEngine;");
             sb.AppendLine("using System.Collections.Generic;");
             if (!string.IsNullOrEmpty(namespaceName) && namespaceName != "CmrGame")
-                sb.AppendLine("using CmrGame;"); // 引用 UIForm 类
+                sb.AppendLine("using CmrGame;");
             sb.AppendLine();
             if (!string.IsNullOrEmpty(namespaceName))
             {
@@ -62,6 +62,7 @@ namespace CmrGame
             sb.AppendLine("    public class " + fileName);
             sb.AppendLine("    {");
 
+            //类内实现
             HashSet<string> usedNames = new HashSet<string>();
             foreach (var group in groups.Values)
             {
@@ -103,6 +104,8 @@ namespace CmrGame
                     }
                 }
             }
+
+
             sb.AppendLine("    }");
             if (!string.IsNullOrEmpty(namespaceName))
                 sb.AppendLine("}");

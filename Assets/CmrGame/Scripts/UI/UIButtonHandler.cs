@@ -2,7 +2,6 @@ using CmrUnityGameFramework.Runtime;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 namespace CmrGame
 {
