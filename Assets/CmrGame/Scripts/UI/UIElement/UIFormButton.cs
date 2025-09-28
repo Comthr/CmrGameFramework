@@ -6,9 +6,9 @@ namespace CmrGame
     // 定义可选择表单控件接口
     public interface IUIFormSelectable
     {
-        void OnSelect();    // 选中时调用
-        void OnDeselect();  // 取消选中时调用
-        void OnConfirm();   // 确认（激活）时调用
+        void OnSelect();
+        void OnDeselect();
+        void OnConfirm(); 
     }
     public enum InputMode
     {

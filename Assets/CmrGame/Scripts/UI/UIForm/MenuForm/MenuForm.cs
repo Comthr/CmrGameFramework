@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace CmrGame
 {
-    public class MenuForm:UIFormLogic
+    public class MenuForm:UIFormLogic 
     {
         private ProcedureMenu m_ProcedureMenu = null;
         public void OnStartButtonClick()
