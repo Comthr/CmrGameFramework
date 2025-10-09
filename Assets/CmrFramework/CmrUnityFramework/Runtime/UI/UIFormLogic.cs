@@ -14,6 +14,8 @@ namespace CmrUnityGameFramework.Runtime
         private Transform m_CachedTransform = null;
         private int m_OriginalLayer = 0;
 
+        public bool m_EnableLocalization = false;
+
         /// <summary>
         /// 获取界面。
         /// </summary>
@@ -102,14 +104,17 @@ namespace CmrUnityGameFramework.Runtime
 
             m_UIForm = GetComponent<UIForm>();
             m_OriginalLayer = gameObject.layer;
-
+            gameObject.GetOrAddComponent<GraphicRaycaster>();
             //国际化
-            Text[] texts = GetComponentsInChildren<Text>(true);
-            for (int i = 0; i < texts.Length; i++)
+            if (m_EnableLocalization)
             {
-                if (!string.IsNullOrEmpty(texts[i].text))
+                Text[] texts = GetComponentsInChildren<Text>(true);
+                for (int i = 0; i < texts.Length; i++)
                 {
-                    texts[i].text = GameEntry.GetComponent<LocalizationComponent>().GetString(texts[i].text);
+                    if (!string.IsNullOrEmpty(texts[i].text))
+                    {
+                        texts[i].text = GameEntry.GetComponent<LocalizationComponent>().GetString(texts[i].text);
+                    }
                 }
             }
         }

@@ -59,7 +59,7 @@ namespace CmrUnityGameFramework.Runtime
 
             private string GetResolutionString(Resolution resolution)
             {
-                return $"{resolution.width} x {resolution.height} @ {resolution.refreshRate}Hz";
+                return $"{resolution.width} x {resolution.height} @ {resolution.refreshRateRatio}Hz";
             }
 
             private string GetCutoutsString(Rect[] cutouts)

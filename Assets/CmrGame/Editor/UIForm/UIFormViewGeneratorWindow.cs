@@ -20,13 +20,13 @@ namespace CmrGame
         void OnGUI()
         {
             EditorGUILayout.LabelField("单个 Prefab 生成 UIForm View 脚本工具", EditorStyles.boldLabel);
-            // 拖拽 Prefab（必须含 UIFormLogic）
+            //Prefab
             prefab = (GameObject)EditorGUILayout.ObjectField("Prefab (含 UIFormLogic)", prefab, typeof(GameObject), false);
             // 输出路径输入
             outputPath = EditorGUILayout.TextField("输出路径", outputPath);
             // 命名空间输入
             namespaceName = EditorGUILayout.TextField("命名空间", namespaceName);
-            // 类名输入（默认留空）
+            // 类名输入
             className = EditorGUILayout.TextField("类名", className);
             // 后缀选项
             addSuffix = EditorGUILayout.Toggle("添加 _Generated 后缀", addSuffix);
@@ -39,7 +39,6 @@ namespace CmrGame
                 }
                 else
                 {
-                    // 调用静态生成方法
                     UIFormViewGenerator.GenerateViewScript(prefab, outputPath, className, namespaceName, addSuffix);
                 }
             }
