@@ -1,4 +1,7 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 namespace CmrGameFramework
 {
     public static partial class Utility
@@ -65,6 +68,33 @@ namespace CmrGameFramework
             public static void GetRandomBytes(byte[] buffer)
             {
                 s_Random.NextBytes(buffer);
+            }
+
+            /// <summary>
+            /// 从集合中获取随机元素
+            /// </summary>
+            /// <param name="e">源。</param>
+            /// <param name="num">获取个数。</param>
+            /// <param name="isRepeat">是否允许重复。</param>
+            /// <returns>获取结果。</returns>
+            public static IEnumerable<T> GetRandomElements<T>(IEnumerable<T> e,int num,bool isRepeat = false )
+            {
+                if(!isRepeat)
+                {
+                    //随机排序取n个不重复的
+                    return e.OrderBy(_ => GetRandom()).Take(num);
+                }
+                else
+                {
+                    List<T> values = new List<T>();
+                    List<T> source = e as List<T>;
+                    for(int i =0; i < num; i++)
+                    {
+                        values.Add(source[GetRandom(num-1)]);
+
+                    }
+                    return values;
+                }
             }
         }
     }
