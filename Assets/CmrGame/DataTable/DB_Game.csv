@@ -1,0 +1,4 @@
+#场景id,#场景名,#资源名,#背景音乐id,#流程名
+1,Launcher,Launcher,-1,null
+2,Menu,Menu,-1,CmrGame.ProcedureMenu
+4,Game,Game,-1,CmrGame.ProcedureGame

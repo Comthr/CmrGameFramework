@@ -51,8 +51,8 @@ namespace CmrGame
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("using UnityEngine;");
             sb.AppendLine("using System.Collections.Generic;");
-            if (!string.IsNullOrEmpty(namespaceName) && namespaceName != "CmrGame")
-                sb.AppendLine("using CmrGame;");
+            if (!string.IsNullOrEmpty(namespaceName) && namespaceName != "None")
+                sb.AppendLine("using None;");
             sb.AppendLine();
             if (!string.IsNullOrEmpty(namespaceName))
             {

@@ -7,7 +7,6 @@ namespace CmrGameFramework
         /// 获取框架模块优先级
         /// </summary>    
         /// <remarks> 优先级较高的模块会优先轮询，并且关闭操作会后进行。</remarks>   
-        /// CYJConfuse:↑什么叫关闭操作后会进行？
         internal virtual int Priority
         {
             get

@@ -30,7 +30,7 @@ namespace BSTool
         private List<CharacterRuntime> GetCharacters()
         {
             //获取到全部的英雄表
-            IDataTable<DRCharacter> table = GFEntry.DataTable.GetDataTable<DRCharacter>();
+            IDataTable<DRCharacter> table = GameEntry.DataTable.GetDataTable<DRCharacter>();
 
             //经典模式下随机选取12个英雄
             List<DRCharacter> results = Utility.Random.GetRandomElements(table, 12).ToList();

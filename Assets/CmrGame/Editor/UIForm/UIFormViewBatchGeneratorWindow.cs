@@ -7,15 +7,15 @@ namespace CmrGame
 {
     public class UIFormViewBatchGeneratorWindow : EditorWindow
     {
-        private string prefabScanPath = "Assets/CmrGame/UI";
-        private string namespaceName = "CmrGame";
-        private string outputPath = "Assets/CmrGame/Scripts/UI/Generated";
+        private string prefabScanPath = "Assets/None/UI";
+        private string namespaceName = "None";
+        private string outputPath = "Assets/None/Scripts/UI/Generated";
         private bool addSuffix = false;
 
         private List<GameObject> foundPrefabs = new List<GameObject>();
         private List<bool> prefabToggles = new List<bool>();
 
-        [MenuItem("CmrGame/Batch Generate UIForm Views")]
+        [MenuItem("None/Batch Generate UIForm Views")]
         public static void ShowWindow()
         {
             GetWindow<UIFormViewBatchGeneratorWindow>("Batch Generate Views");

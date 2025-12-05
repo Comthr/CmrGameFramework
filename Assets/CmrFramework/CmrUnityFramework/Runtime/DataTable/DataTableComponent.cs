@@ -3,6 +3,7 @@ using CmrGameFramework.DataTable;
 using CmrGameFramework.Resource;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
 
 namespace CmrUnityGameFramework.Runtime
@@ -387,23 +388,20 @@ namespace CmrUnityGameFramework.Runtime
 
 
         #region Extension
-        public void LoadDataTable(string nameSpaceName,string dataTableName, string dataTableAssetName, object userData)
-        {
 
-            if (string.IsNullOrEmpty(dataTableName)||string.IsNullOrEmpty(nameSpaceName))
+        public string GetTableName<T>(T table) where T : Enum
+        {
+            return $"{typeof(T).Namespace}.{table}";
+        }
+        public void LoadDataTable<T>(string tableName,string dataTableAssetName, object userData) where T:class,IDataRow,new() 
+        {
+            if (string.IsNullOrEmpty(tableName))
             {
                 Log.Warning("Data table name is invalid.");
                 return;
             }
-            string className = $"{nameSpaceName}.{dataTableName}";
-            Type dataRowType = Utility.Assembly.GetType(className);
-            if (dataRowType == null)
-            {
-                Log.Error("Can not get data row type with class name '{0}'.", className);
-                return;
-            }
 
-            DataTableBase dataTable = CreateDataTable(dataRowType, className);
+            DataTableBase dataTable = CreateDataTable(typeof(T),tableName);
             dataTable.ReadData(dataTableAssetName, Constant.AssetPriority.DataTableAsset, userData);
         }
 

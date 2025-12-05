@@ -6,12 +6,12 @@ namespace CmrGame
     public class UIFormViewGeneratorWindow : EditorWindow
     {
         private GameObject prefab;
-        private string namespaceName = "CmrGame";
+        private string namespaceName = "None";
         private string className = "";
-        private string outputPath = "Assets/CmrGame/Scripts/UI/Generated";
+        private string outputPath = "Assets/None/Scripts/UI/Generated";
         private bool addSuffix = false;
 
-        [MenuItem("CmrGame/Generate UIForm View")]
+        [MenuItem("None/Generate UIForm View")]
         public static void ShowWindow()
         {
             GetWindow<UIFormViewGeneratorWindow>("Generate UIForm View");

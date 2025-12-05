@@ -11,9 +11,8 @@ public class XlsxToCsvTool : EditorWindow
 {
     private List<string> xlsxFiles = new List<string>();  // 存储文件路径
     private List<bool> fileSelections = new List<bool>();  // 存储文件选择状态
-    private bool convertToTxt = false;  // 是否勾选转换为txt
-    private string inputDirectory = "Assets/CmrGame/DataTable/Xlsx";  // 输入文件夹路径
-    private string outputDirectory = "Assets/CmrGame/DataTable/Csv";  // 输出文件夹路径
+    private string inputDirectory = "Assets/None/DataTable/Xlsx";  // 输入文件夹路径
+    private string outputDirectory = "Assets/None/DataTable/Csv";  // 输出文件夹路径
 
     [MenuItem("Tools/Xlsx to Csv Tool")]
     public static void ShowWindow()
@@ -86,8 +85,6 @@ public class XlsxToCsvTool : EditorWindow
         }
         GUILayout.EndHorizontal();
 
-        // 是否导出为TXT
-        convertToTxt = EditorGUILayout.Toggle("Convert to Txt", convertToTxt);
 
         // 转换按钮
         if (GUILayout.Button("Convert"))
@@ -199,46 +196,22 @@ public class XlsxToCsvTool : EditorWindow
                     Directory.CreateDirectory(outputDir);
                 }
 
-                // 如果勾选了txt格式，则只转换为txt文件
-                if (convertToTxt)
+                // 转换为csv文件
+                string csvFilePath = Path.ChangeExtension(outputFilePath, ".csv");
+                // 读取xlsx文件并转换为csv
+                string csvContent = ConvertXlsxToCsv(filePath);
+
+                // 保存为CSV文件
+                try
                 {
-                    string txtFilePath = Path.ChangeExtension(outputFilePath, ".txt");
-
-                    // 读取xlsx文件并转换为txt
-                    string txtContent = ConvertXlsxToCsv(filePath);
-
-                    // 保存为txt文件
-                    try
-                    {
-                        File.WriteAllText(txtFilePath, txtContent);
-                    }
-                    catch
-                    {
-                        throw new Exception($"[XlsxToCsvTool] 转换失败！转换前请先关闭{txtFilePath}。");
-                    }
-
-                    Debug.Log($"Converted {filePath} to {txtFilePath}");
+                    File.WriteAllText(csvFilePath, csvContent);
                 }
-                else
+                catch
                 {
-                    // 否则转换为csv文件
-                    string csvFilePath = Path.ChangeExtension(outputFilePath, ".csv");
-
-                    // 读取xlsx文件并转换为csv
-                    string csvContent = ConvertXlsxToCsv(filePath);
-
-                    // 保存为CSV文件
-                    try
-                    {
-                        File.WriteAllText(csvFilePath, csvContent);
-                    }
-                    catch
-                    {
-                        throw new Exception($"[XlsxToCsvTool] 转换失败！转换前请先关闭{csvFilePath}。");
-                    }
-
-                    Debug.Log($"Converted {filePath} to {csvFilePath}");
+                    throw new Exception($"[XlsxToCsvTool] 转换失败！转换前请先关闭{csvFilePath}。");
                 }
+
+                Debug.Log($"Converted {filePath} to {csvFilePath}");
             }
         }
         AssetDatabase.Refresh();  // 刷新资源
