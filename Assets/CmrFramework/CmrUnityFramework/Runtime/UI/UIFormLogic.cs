@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 界面逻辑基类。

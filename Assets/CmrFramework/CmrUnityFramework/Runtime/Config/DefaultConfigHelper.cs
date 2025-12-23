@@ -5,7 +5,7 @@ using System.IO;
 using System.Text;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// Ä¬ÈÏÈ«¾ÖÅäÖÃ¸¨ÖúÆ÷¡£

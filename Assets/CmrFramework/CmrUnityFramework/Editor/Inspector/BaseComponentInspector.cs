@@ -1,9 +1,9 @@
 using CmrGameFramework;
-using CmrUnityGameFramework.Runtime;
+using CmrUnityFramework.Runtime;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-namespace CmrUnityGameFramework.Editor
+namespace CmrUnityFramework.Editor
 {
     [CustomEditor(typeof(BaseComponent))]
     internal sealed class BaseComponentInspector : GameFrameworkInspector

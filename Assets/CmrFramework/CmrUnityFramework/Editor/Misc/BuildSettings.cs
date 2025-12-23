@@ -5,7 +5,7 @@ using System.Xml;
 using UnityEditor;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Editor
+namespace CmrUnityFramework.Editor
 {
     /// <summary>
     /// 构建配置相关的实用函数。
@@ -30,7 +30,7 @@ namespace CmrUnityGameFramework.Editor
             {
                 XmlDocument xmlDocument = new XmlDocument();
                 xmlDocument.Load(s_ConfigurationPath);
-                XmlNode xmlRoot = xmlDocument.SelectSingleNode("CmrUnityGameFramework");
+                XmlNode xmlRoot = xmlDocument.SelectSingleNode("CmrUnityFramework");
                 XmlNode xmlBuildSettings = xmlRoot.SelectSingleNode("BuildSettings");
                 XmlNode xmlDefaultScenes = xmlBuildSettings.SelectSingleNode("DefaultScenes");
                 XmlNode xmlSearchScenePaths = xmlBuildSettings.SelectSingleNode("SearchScenePaths");

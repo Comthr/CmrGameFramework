@@ -2,7 +2,7 @@
 using CmrGameFramework.Event;
 using CmrGameFramework.Network;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 用户自定义网络错误事件。

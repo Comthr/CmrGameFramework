@@ -2,7 +2,7 @@
 using CmrGameFramework.Localization;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 本地化辅助器基类。

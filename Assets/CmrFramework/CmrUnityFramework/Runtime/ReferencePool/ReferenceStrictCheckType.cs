@@ -1,4 +1,4 @@
-﻿namespace CmrUnityGameFramework.Runtime
+﻿namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 引用强制检查类型。

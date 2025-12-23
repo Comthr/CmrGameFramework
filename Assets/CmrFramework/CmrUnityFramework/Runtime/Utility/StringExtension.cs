@@ -1,5 +1,5 @@
 using System;
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     public static class StringExtension
     {

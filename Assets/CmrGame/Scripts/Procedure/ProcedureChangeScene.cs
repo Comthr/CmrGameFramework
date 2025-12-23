@@ -1,7 +1,7 @@
 using CmrGameFramework;
 using CmrGameFramework.Event;
 using CmrGameFramework.Procedure;
-using CmrUnityGameFramework.Runtime;
+using CmrUnityFramework.Runtime;
 using ProcedureOwner = CmrGameFramework.Fsm.IFsm<CmrGameFramework.Procedure.IProcedureManager>;
 
 namespace CmrGame
@@ -9,11 +9,13 @@ namespace CmrGame
     public class ProcedureChangeScene:ProcedureBase
     {
         private string m_ProcedureToLoad;
+        private bool m_IsChangeSceneComplete;
         protected override void OnEnter(ProcedureOwner procedureOwner)
         {
             base.OnEnter(procedureOwner);
 
             m_ProcedureToLoad = null;
+            m_IsChangeSceneComplete = false;
 
             GameEntry.Event.Subscribe(LoadSceneSuccessEventArgs.EventId, OnLoadSceneSuccess);
             GameEntry.Event.Subscribe(LoadSceneFailureEventArgs.EventId, OnLoadSceneFailure);
@@ -38,20 +40,18 @@ namespace CmrGame
             // 还原游戏速度
             GameEntry.Base.ResetNormalGameSpeed();
 
-            int sceneId = procedureOwner.GetData<VarInt32>(Constant.Procedrue.nextSceneId);
-            DRScene drScene = GameEntry.DataTable.GetDataTable<DRScene>().GetDataRow(sceneId);
-            if (drScene == null)
-            {
-                Log.Warning("Can not load scene '{0}' from data table.", sceneId.ToString());
-                return;
-            }
-            m_ProcedureToLoad = drScene.ProcedureName;
-            GameEntry.Scene.LoadScene(GameEntry.GlobalSettings.Asset.GetSceneAsset(drScene.AssetName), Constant.AssetPriority.SceneAsset, this);
+
+            LoadNextScene(procedureOwner);
 
             //CYJTodo:bgm
             //m_BackgroundMusicId = drScene.BackgroundMusicId;
 
 
+        }
+        public void LoadNextScene(ProcedureOwner owner)
+        {
+            string sceneName = this.GetSceneName(owner);
+            GameEntry.Scene.LoadScene(sceneName);
         }
         protected override void OnUpdate(ProcedureOwner procedureOwner, float elapseSeconds, float realElapseSeconds)
         {

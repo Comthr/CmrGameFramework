@@ -2,7 +2,7 @@
 using CmrGameFramework.Event;
 using System;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 显示实体时加载依赖资源事件。

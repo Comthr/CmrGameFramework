@@ -22,9 +22,9 @@ namespace CmrGame
             /// <param name="tableName">±Ì√˚</param>
             /// <param name="gameType">”Œœ∑</param>
             /// <returns></returns>
-            public static string GetGameDataTableAsset(string tableName,E_Game gameType = E_Game.None)
+            public static string GetGameDataTableAsset(string tableName,E_GameSession gameType = E_GameSession.None)
             {
-                if (gameType == E_Game.None)
+                if (gameType == E_GameSession.None)
                     gameType = GameEntry.CurrentGame;
                 string filePath = string.Format(dataTablePath, gameType.ToString());
                 return $"{filePath}/{tableName}{extensionCSV}";
@@ -39,9 +39,9 @@ namespace CmrGame
                 string filePath = string.Format(dataTablePath, Namespace);
                 return $"{filePath}/{tableName}{extensionCSV}";
             }
-            public static string GetGameSceneAsset(string tableName, E_Game gameType = E_Game.None)
+            public static string GetGameSceneAsset(string tableName, E_GameSession gameType = E_GameSession.None)
             {
-                if (gameType == E_Game.None)
+                if (gameType == E_GameSession.None)
                     gameType = GameEntry.CurrentGame;
                 string filePath = string.Format(scenePath, gameType.ToString());
                 return $"{filePath}/{tableName}{extensionScene}";
@@ -51,9 +51,9 @@ namespace CmrGame
                 string filePath = string.Format(scenePath, Namespace);
                 return $"{filePath}/{tableName}{extensionScene}";
             }
-            public static string GetGameUIFormAsset(string tableName, E_Game gameType = E_Game.None)
+            public static string GetGameUIFormAsset(string tableName, E_GameSession gameType = E_GameSession.None)
             {
-                if (gameType == E_Game.None)
+                if (gameType == E_GameSession.None)
                     gameType = GameEntry.CurrentGame;
                 string filePath = string.Format(uiFormAsset, gameType.ToString());
                 return $"{filePath}/{tableName}{extensionPrefab}";

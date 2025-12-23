@@ -1,5 +1,5 @@
 using System;
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     internal sealed class SceneAsset
     {

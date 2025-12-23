@@ -1,8 +1,8 @@
 ﻿using CmrGameFramework;
 using CmrGameFramework.Entity;
-using CmrUnityGameFramework.Runtime;
+using CmrUnityFramework.Runtime;
 using UnityEditor;
-namespace CmrUnityGameFramework.Editor
+namespace CmrUnityFramework.Editor
 {
     [CustomEditor(typeof(EntityComponent))]
     internal sealed class EntityComponentInspector : GameFrameworkInspector

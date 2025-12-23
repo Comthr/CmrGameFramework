@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEngine;
-namespace CmrUnityGameFramework.Editor
+namespace CmrUnityFramework.Editor
 {
     public sealed class HelperInfo<T> where T : MonoBehaviour
     {

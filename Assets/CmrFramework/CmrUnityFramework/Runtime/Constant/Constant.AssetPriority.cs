@@ -1,4 +1,4 @@
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     public partial class Constant
     {

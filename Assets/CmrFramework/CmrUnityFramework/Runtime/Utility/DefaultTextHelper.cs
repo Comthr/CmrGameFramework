@@ -2,7 +2,7 @@ using CmrGameFramework;
 using System;
 using System.Text;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// Ä¬ÈÏ×Ö·û¸¨ÖúÆ÷¡£

@@ -1,7 +1,7 @@
 using CmrGameFramework.UI;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// Ä¬ÈÏ½çÃæ¸¨ÖúÆ÷¡£

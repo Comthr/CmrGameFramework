@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 数据文件转化类接口

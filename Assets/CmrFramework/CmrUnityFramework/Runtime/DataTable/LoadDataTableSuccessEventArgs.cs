@@ -1,7 +1,7 @@
 ﻿using CmrGameFramework;
 using CmrGameFramework.Event;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 加载数据表成功事件。

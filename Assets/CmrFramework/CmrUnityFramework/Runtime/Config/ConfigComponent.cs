@@ -3,7 +3,7 @@ using CmrGameFramework.Config;
 using CmrGameFramework.Resource;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 全局配置组件。

@@ -1,7 +1,7 @@
 ﻿using CmrGameFramework;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 默认游戏框架日志辅助器。

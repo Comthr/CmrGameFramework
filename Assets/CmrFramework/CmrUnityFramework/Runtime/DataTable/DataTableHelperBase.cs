@@ -2,7 +2,7 @@
 using CmrGameFramework.DataTable;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 数据表辅助器基类。

@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.Profiling;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     public sealed partial class DebuggerComponent : GameFrameworkComponent
     {

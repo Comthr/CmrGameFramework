@@ -2,7 +2,7 @@ using CmrGameFramework;
 using CmrGameFramework.Event;
 using UnityEngine.SceneManagement;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 激活场景被改变事件。

@@ -1,7 +1,7 @@
 ﻿using CmrGameFramework;
 using CmrGameFramework.Event;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 资源校验开始事件。

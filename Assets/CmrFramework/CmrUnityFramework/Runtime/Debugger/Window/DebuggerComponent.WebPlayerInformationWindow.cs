@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     public sealed partial class DebuggerComponent : GameFrameworkComponent
     {

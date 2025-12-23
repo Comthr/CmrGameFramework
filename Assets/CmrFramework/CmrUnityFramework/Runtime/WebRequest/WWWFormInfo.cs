@@ -1,7 +1,7 @@
 ﻿using CmrGameFramework;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     internal sealed class WWWFormInfo : IReference
     {

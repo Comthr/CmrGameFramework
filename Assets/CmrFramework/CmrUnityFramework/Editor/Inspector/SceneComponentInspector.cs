@@ -1,8 +1,8 @@
-using CmrUnityGameFramework.Runtime;
+using CmrUnityFramework.Runtime;
 using System;
 using UnityEditor;
 using UnityEngine;
-namespace CmrUnityGameFramework.Editor
+namespace CmrUnityFramework.Editor
 {
     [CustomEditor(typeof(SceneComponent))]
     internal sealed class SceneComponentInspector : GameFrameworkInspector

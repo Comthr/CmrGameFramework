@@ -3,7 +3,7 @@ using CmrGameFramework.FileSystem;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 文件系统件。
@@ -15,7 +15,7 @@ namespace CmrUnityGameFramework.Runtime
         private IFileSystemManager m_FileSystemManager = null;
 
         [SerializeField]
-        private string m_FileSystemHelperTypeName = "CmrUnityGameFramework.Runtime.DefaultFileSystemHelper";
+        private string m_FileSystemHelperTypeName = "CmrUnityFramework.Runtime.DefaultFileSystemHelper";
 
         [SerializeField]
         private FileSystemHelperBase m_CustomFileSystemHelper = null;

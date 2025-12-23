@@ -2,7 +2,7 @@
 using System;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 默认 JSON 函数集辅助器。

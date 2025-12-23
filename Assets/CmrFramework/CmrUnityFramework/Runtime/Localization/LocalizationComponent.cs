@@ -3,7 +3,7 @@ using CmrGameFramework.Localization;
 using CmrGameFramework.Resource;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 本地化组件。
@@ -24,7 +24,7 @@ namespace CmrUnityGameFramework.Runtime
         private bool m_EnableLoadDictionaryDependencyAssetEvent = false;
 
         [SerializeField]
-        private string m_LocalizationHelperTypeName = "CmrUnityGameFramework.Runtime.DefaultLocalizationHelper";
+        private string m_LocalizationHelperTypeName = "CmrUnityFramework.Runtime.DefaultLocalizationHelper";
 
         [SerializeField]
         private LocalizationHelperBase m_CustomLocalizationHelper = null;

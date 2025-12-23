@@ -1,7 +1,7 @@
 ﻿using CmrGameFramework;
 using CmrGameFramework.Event;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 下载成功事件。

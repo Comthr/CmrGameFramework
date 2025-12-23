@@ -1,5 +1,5 @@
 using System;
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 读写区路径类型。

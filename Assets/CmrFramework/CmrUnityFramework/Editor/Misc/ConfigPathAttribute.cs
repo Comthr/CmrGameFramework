@@ -1,5 +1,5 @@
 using System;
-namespace CmrUnityGameFramework.Editor
+namespace CmrUnityFramework.Editor
 {
     /// <summary>
     /// ≈‰÷√¬∑æ∂ Ù–‘°£

@@ -2,7 +2,7 @@
 using CmrGameFramework.Event;
 using CmrGameFramework.Network;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 网络连接关闭事件。

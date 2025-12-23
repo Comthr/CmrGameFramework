@@ -1,9 +1,9 @@
 ﻿
-using CmrUnityGameFramework.Runtime;
+using CmrUnityFramework.Runtime;
 using UnityEditor;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Editor
+namespace CmrUnityFramework.Editor
 {
     [CustomEditor(typeof(DebuggerComponent))]
     internal sealed class DebuggerComponentInspector : GameFrameworkInspector

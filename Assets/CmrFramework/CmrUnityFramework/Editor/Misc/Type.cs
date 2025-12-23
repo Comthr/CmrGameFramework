@@ -2,7 +2,7 @@ using CmrGameFramework;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
-namespace CmrUnityGameFramework.Editor
+namespace CmrUnityFramework.Editor
 {
     /// <summary>
     /// 类型相关的实用函数。
@@ -11,14 +11,14 @@ namespace CmrUnityGameFramework.Editor
     {
         private static readonly string[] RuntimeAssemblyNames =
         {
-            "CmrUnityGameFramework.Runtime",
+            "CmrUnityFramework.Runtime",
             "Assembly-CSharp"
         };
 
         private static readonly string[] RuntimeOrEditorAssemblyNames =
         {
-            "CmrUnityGameFramework.Runtime",
-            "CmrUnityGameFramework.Editor",
+            "CmrUnityFramework.Runtime",
+            "CmrUnityFramework.Editor",
             "Assembly-CSharp"
         };
 
@@ -146,6 +146,65 @@ namespace CmrUnityGameFramework.Editor
             {
                 return a.ToString().CompareTo(b.ToString());
             });
+            return typeList.ToArray();
+        }
+
+        /// <summary>
+        /// 在运行时程序集中获取指定命名空间下的所有类型（非抽象类）。
+        /// </summary>
+        /// <param name="namespaceName">命名空间名称。</param>
+        /// <returns>该命名空间下的类型组。</returns>
+        public static System.Type[] GetRuntimeTypesInNamespace(string namespaceName)
+        {
+            return GetTypesInNamespace(namespaceName, RuntimeAssemblyNames);
+        }
+
+        /// <summary>
+        /// 在运行时或编辑器程序集中获取指定命名空间下的所有类型（非抽象类）。
+        /// </summary>
+        /// <param name="namespaceName">命名空间名称。</param>
+        /// <returns>该命名空间下的类型组。</returns>
+        internal static System.Type[] GetRuntimeOrEditorTypesInNamespace(string namespaceName)
+        {
+            return GetTypesInNamespace(namespaceName, RuntimeOrEditorAssemblyNames);
+        }
+
+        private static System.Type[] GetTypesInNamespace(string namespaceName, string[] assemblyNames)
+        {
+            List<System.Type> typeList = new List<System.Type>();
+            foreach (string assemblyName in assemblyNames)
+            {
+                Assembly assembly = null;
+                try
+                {
+                    assembly = Assembly.Load(assemblyName);
+                }
+                catch (Exception e)
+                {
+                    string s = e.ToString();
+                    continue;
+                }
+
+                if (assembly == null)
+                {
+                    continue;
+                }
+
+                System.Type[] types = assembly.GetTypes();
+                foreach (System.Type type in types)
+                {
+                    if (type.IsClass && !type.IsAbstract && type.Namespace == namespaceName)
+                    {
+                        typeList.Add(type);
+                    }
+                }
+            }
+
+            typeList.Sort((a, b) =>
+            {
+                return a.ToString().CompareTo(b.ToString());
+            });
+
             return typeList.ToArray();
         }
     }

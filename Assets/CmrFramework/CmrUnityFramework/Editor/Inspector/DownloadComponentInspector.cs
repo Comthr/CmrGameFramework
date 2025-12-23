@@ -1,12 +1,12 @@
 ﻿using CmrGameFramework;
-using CmrUnityGameFramework.Runtime;
+using CmrUnityFramework.Runtime;
 using System;
 using System.IO;
 using System.Text;
 using UnityEditor;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Editor
+namespace CmrUnityFramework.Editor
 {
     [CustomEditor(typeof(DownloadComponent))]
     internal sealed class DownloadComponentInspector : GameFrameworkInspector

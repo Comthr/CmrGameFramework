@@ -1,4 +1,4 @@
-﻿namespace CmrUnityGameFramework.Runtime
+﻿namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 调试器激活窗口类型。

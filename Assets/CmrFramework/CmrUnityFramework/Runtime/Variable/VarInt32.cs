@@ -8,7 +8,7 @@
 using CmrGameFramework;
 using System;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// System.Int32 变量类。

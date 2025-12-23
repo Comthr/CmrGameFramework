@@ -2,7 +2,7 @@
 using CmrGameFramework.Event;
 using CmrGameFramework.Sound;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 播放声音时加载依赖资源事件。

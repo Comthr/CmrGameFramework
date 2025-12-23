@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using CmrGameFramework;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 默认版本号辅助器。

@@ -1,6 +1,6 @@
 ﻿using CmrGameFramework;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// System.String 变量类。

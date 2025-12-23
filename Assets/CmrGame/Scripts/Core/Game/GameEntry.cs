@@ -1,12 +1,12 @@
-using CmrUnityGameFramework.Runtime;
+using CmrUnityFramework.Runtime;
 using UnityEngine;
 
 namespace CmrGame
 {
     public class GameEntry:MonoBehaviour
     {
-        private static E_Game currentGame;
-        public static E_Game CurrentGame => currentGame;
+        private static E_GameSession currentGame;
+        public static E_GameSession CurrentGame => currentGame;
         #region Components Ref
         public static BaseComponent Base { get; private set; }
         public static ConfigComponent Config { get; private set; }
@@ -41,27 +41,27 @@ namespace CmrGame
         }
         private void InitFrameworkComponents()
         {
-            Base = CmrUnityGameFramework.Runtime.GameEntry.GetComponent<BaseComponent>();
-            Config = CmrUnityGameFramework.Runtime.GameEntry.GetComponent<ConfigComponent>();
-            DataNode = CmrUnityGameFramework.Runtime.GameEntry.GetComponent<DataNodeComponent>();
-            DataTable = CmrUnityGameFramework.Runtime.GameEntry.GetComponent<DataTableComponent>();
-            Debugger = CmrUnityGameFramework.Runtime.GameEntry.GetComponent<DebuggerComponent>();
-            Download = CmrUnityGameFramework.Runtime.GameEntry.GetComponent<DownloadComponent>();
-            Entity = CmrUnityGameFramework.Runtime.GameEntry.GetComponent<EntityComponent>();
-            Event = CmrUnityGameFramework.Runtime.GameEntry.GetComponent<EventComponent>();
-            FileSystem = CmrUnityGameFramework.Runtime.GameEntry.GetComponent<FileSystemComponent>();
-            Fsm = CmrUnityGameFramework.Runtime.GameEntry.GetComponent<FsmComponent>();
-            Localization = CmrUnityGameFramework.Runtime.GameEntry.GetComponent<LocalizationComponent>();
-            Network = CmrUnityGameFramework.Runtime.GameEntry.GetComponent<NetworkComponent>();
-            ObjectPool = CmrUnityGameFramework.Runtime.GameEntry.GetComponent<ObjectPoolComponent>();
-            Procedure = CmrUnityGameFramework.Runtime.GameEntry.GetComponent<ProcedureComponent>();
-            ReferencePool = CmrUnityGameFramework.Runtime.GameEntry.GetComponent<ReferencePoolComponent>();
-            Resource = CmrUnityGameFramework.Runtime.GameEntry.GetComponent<ResourceComponent>();
-            Scene = CmrUnityGameFramework.Runtime.GameEntry.GetComponent<SceneComponent>();
-            Setting = CmrUnityGameFramework.Runtime.GameEntry.GetComponent<SettingComponent>();
-            Sound = CmrUnityGameFramework.Runtime.GameEntry.GetComponent<SoundComponent>();
-            UI = CmrUnityGameFramework.Runtime.GameEntry.GetComponent<UIComponent>();
-            WebRequest = CmrUnityGameFramework.Runtime.GameEntry.GetComponent<WebRequestComponent>();
+            Base = CmrUnityFramework.Runtime.GameEntry.GetComponent<BaseComponent>();
+            Config = CmrUnityFramework.Runtime.GameEntry.GetComponent<ConfigComponent>();
+            DataNode = CmrUnityFramework.Runtime.GameEntry.GetComponent<DataNodeComponent>();
+            DataTable = CmrUnityFramework.Runtime.GameEntry.GetComponent<DataTableComponent>();
+            Debugger = CmrUnityFramework.Runtime.GameEntry.GetComponent<DebuggerComponent>();
+            Download = CmrUnityFramework.Runtime.GameEntry.GetComponent<DownloadComponent>();
+            Entity = CmrUnityFramework.Runtime.GameEntry.GetComponent<EntityComponent>();
+            Event = CmrUnityFramework.Runtime.GameEntry.GetComponent<EventComponent>();
+            FileSystem = CmrUnityFramework.Runtime.GameEntry.GetComponent<FileSystemComponent>();
+            Fsm = CmrUnityFramework.Runtime.GameEntry.GetComponent<FsmComponent>();
+            Localization = CmrUnityFramework.Runtime.GameEntry.GetComponent<LocalizationComponent>();
+            Network = CmrUnityFramework.Runtime.GameEntry.GetComponent<NetworkComponent>();
+            ObjectPool = CmrUnityFramework.Runtime.GameEntry.GetComponent<ObjectPoolComponent>();
+            Procedure = CmrUnityFramework.Runtime.GameEntry.GetComponent<ProcedureComponent>();
+            ReferencePool = CmrUnityFramework.Runtime.GameEntry.GetComponent<ReferencePoolComponent>();
+            Resource = CmrUnityFramework.Runtime.GameEntry.GetComponent<ResourceComponent>();
+            Scene = CmrUnityFramework.Runtime.GameEntry.GetComponent<SceneComponent>();
+            Setting = CmrUnityFramework.Runtime.GameEntry.GetComponent<SettingComponent>();
+            Sound = CmrUnityFramework.Runtime.GameEntry.GetComponent<SoundComponent>();
+            UI = CmrUnityFramework.Runtime.GameEntry.GetComponent<UIComponent>();
+            WebRequest = CmrUnityFramework.Runtime.GameEntry.GetComponent<WebRequestComponent>();
 
         }
     }

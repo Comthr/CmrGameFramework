@@ -3,7 +3,7 @@ using CmrGameFramework.Fsm;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     [DisallowMultipleComponent]
     [AddComponentMenu("CmrFramework/FSM")]

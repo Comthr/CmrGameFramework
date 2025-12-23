@@ -1,9 +1,9 @@
 using CmrGameFramework;
 using CmrGameFramework.Fsm;
-using CmrUnityGameFramework.Runtime;
+using CmrUnityFramework.Runtime;
 using System;
 using UnityEditor;
-namespace CmrUnityGameFramework.Editor
+namespace CmrUnityFramework.Editor
 {
     [CustomEditor(typeof(FsmComponent))]
     internal sealed class FsmComponentInspector : GameFrameworkInspector

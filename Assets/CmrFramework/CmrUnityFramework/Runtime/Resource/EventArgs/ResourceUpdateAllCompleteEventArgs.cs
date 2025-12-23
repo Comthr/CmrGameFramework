@@ -1,7 +1,7 @@
 ﻿using CmrGameFramework;
 using CmrGameFramework.Event;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 资源更新全部完成事件。

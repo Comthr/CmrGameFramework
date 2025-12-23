@@ -1,5 +1,5 @@
 using CmrGameFramework.Procedure;
-using CmrUnityGameFramework.Runtime;
+using CmrUnityFramework.Runtime;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -66,8 +66,8 @@ namespace CmrGame
         public static int OpenUIForm(this UIComponent uiComponent, EUIForm formEnum,object userdata =null)
         {
             DRUIForm uiform = GameEntry.DataTable.GetDataTable<DRUIForm>().GetDataRow((int)formEnum);
-            return GameEntry.UI.OpenUIForm(GameEntry.GlobalSettings.Asset.GetUIFormAsset(uiform.AssetName),
-                uiform.UIGroupName, Constant.AssetPriority.UIFormAsset, userData: userdata);
+            return GameEntry.UI.OpenUIForm(Constant.Asset.GetGlobalUIFormAsset(uiform.AssetName),
+                uiform.UIGroupName, userData: userdata);
         }
         public static void OpenDialog(this UIComponent uiComponent, DialogParams dialogParams)
         {

@@ -2,7 +2,7 @@ using CmrGameFramework;
 using CmrGameFramework.Config;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 全局配置辅助器基类。

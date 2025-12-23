@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 声音组件。
@@ -34,19 +34,19 @@ namespace CmrUnityGameFramework.Runtime
         private AudioMixer m_AudioMixer = null;
 
         [SerializeField]
-        private string m_SoundHelperTypeName = "CmrUnityGameFramework.Runtime.DefaultSoundHelper";
+        private string m_SoundHelperTypeName = "CmrUnityFramework.Runtime.DefaultSoundHelper";
 
         [SerializeField]
         private SoundHelperBase m_CustomSoundHelper = null;
 
         [SerializeField]
-        private string m_SoundGroupHelperTypeName = "CmrUnityGameFramework.Runtime.DefaultSoundGroupHelper";
+        private string m_SoundGroupHelperTypeName = "CmrUnityFramework.Runtime.DefaultSoundGroupHelper";
 
         [SerializeField]
         private SoundGroupHelperBase m_CustomSoundGroupHelper = null;
 
         [SerializeField]
-        private string m_SoundAgentHelperTypeName = "CmrUnityGameFramework.Runtime.DefaultSoundAgentHelper";
+        private string m_SoundAgentHelperTypeName = "CmrUnityFramework.Runtime.DefaultSoundAgentHelper";
 
         [SerializeField]
         private SoundAgentHelperBase m_CustomSoundAgentHelper = null;

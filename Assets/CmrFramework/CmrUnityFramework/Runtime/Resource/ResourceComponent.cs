@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 资源组件。
@@ -78,13 +78,13 @@ namespace CmrUnityGameFramework.Runtime
         private Transform m_InstanceRoot = null;
 
         [SerializeField]
-        private string m_ResourceHelperTypeName = "CmrUnityGameFramework.Runtime.DefaultResourceHelper";
+        private string m_ResourceHelperTypeName = "CmrUnityFramework.Runtime.DefaultResourceHelper";
 
         [SerializeField]
         private ResourceHelperBase m_CustomResourceHelper = null;
 
         [SerializeField]
-        private string m_LoadResourceAgentHelperTypeName = "CmrUnityGameFramework.Runtime.DefaultLoadResourceAgentHelper";
+        private string m_LoadResourceAgentHelperTypeName = "CmrUnityFramework.Runtime.DefaultLoadResourceAgentHelper";
 
         [SerializeField]
         private LoadResourceAgentHelperBase m_CustomLoadResourceAgentHelper = null;

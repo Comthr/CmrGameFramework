@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 实体组件。
@@ -32,13 +32,13 @@ namespace CmrUnityGameFramework.Runtime
         private Transform m_InstanceRoot = null;
 
         [SerializeField]
-        private string m_EntityHelperTypeName = "CmrUnityGameFramework.Runtime.DefaultEntityHelper";
+        private string m_EntityHelperTypeName = "CmrUnityFramework.Runtime.DefaultEntityHelper";
 
         [SerializeField]
         private EntityHelperBase m_CustomEntityHelper = null;
 
         [SerializeField]
-        private string m_EntityGroupHelperTypeName = "CmrUnityGameFramework.Runtime.DefaultEntityGroupHelper";
+        private string m_EntityGroupHelperTypeName = "CmrUnityFramework.Runtime.DefaultEntityGroupHelper";
 
         [SerializeField]
         private EntityGroupHelperBase m_CustomEntityGroupHelper = null;

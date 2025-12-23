@@ -3,7 +3,7 @@ using CmrGameFramework.Download;
 using System;
 using UnityEngine.Networking;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     public partial class UnityWebRequestDownloadAgentHelper : DownloadAgentHelperBase, IDisposable
     {

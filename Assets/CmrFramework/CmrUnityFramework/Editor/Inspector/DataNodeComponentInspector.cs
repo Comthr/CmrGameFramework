@@ -1,8 +1,8 @@
 ﻿using CmrGameFramework.DataNode;
-using CmrUnityGameFramework.Runtime;
+using CmrUnityFramework.Runtime;
 using UnityEditor;
 
-namespace CmrUnityGameFramework.Editor
+namespace CmrUnityFramework.Editor
 {
     [CustomEditor(typeof(DataNodeComponent))]
     internal sealed class DataNodeComponentInspector : GameFrameworkInspector

@@ -4,7 +4,7 @@ using System;
 using System.IO;
 using System.Text;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 内置版本资源列表序列化器。

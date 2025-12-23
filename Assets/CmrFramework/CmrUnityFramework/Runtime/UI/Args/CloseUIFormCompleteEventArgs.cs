@@ -2,7 +2,7 @@
 using CmrGameFramework.Event;
 using CmrGameFramework.UI;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 关闭界面完成事件。

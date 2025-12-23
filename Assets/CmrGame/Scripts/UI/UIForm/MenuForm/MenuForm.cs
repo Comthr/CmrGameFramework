@@ -1,4 +1,4 @@
-using CmrUnityGameFramework.Runtime;
+using CmrUnityFramework.Runtime;
 using UnityEngine;
 
 namespace CmrGame
@@ -29,7 +29,7 @@ namespace CmrGame
                 Mode = 2,
                 Title = GameEntry.Localization.GetString("AskQuitGame.Title"),
                 Message = GameEntry.Localization.GetString("AskQuitGame.Message"),
-                OnClickConfirm = delegate (object userData) { CmrUnityGameFramework.Runtime.GameEntry.Shutdown(ShutdownType.Quit); },
+                OnClickConfirm = delegate (object userData) { CmrUnityFramework.Runtime.GameEntry.Shutdown(ShutdownType.Quit); },
             });
         }
         protected override void OnOpen(object userData)

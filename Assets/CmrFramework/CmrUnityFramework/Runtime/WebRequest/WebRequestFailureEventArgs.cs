@@ -1,7 +1,7 @@
 ﻿using CmrGameFramework;
 using CmrGameFramework.Event;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// Web 请求失败事件。

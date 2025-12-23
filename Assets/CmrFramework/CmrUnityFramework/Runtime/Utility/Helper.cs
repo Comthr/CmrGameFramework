@@ -1,6 +1,6 @@
 using CmrGameFramework;
 using UnityEngine;
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 辅助器创建器相关的实用函数。

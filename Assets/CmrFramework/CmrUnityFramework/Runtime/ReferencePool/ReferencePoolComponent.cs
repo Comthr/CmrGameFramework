@@ -1,7 +1,7 @@
 ﻿using CmrGameFramework;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 引用池组件。

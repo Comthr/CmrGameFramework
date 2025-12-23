@@ -4,9 +4,9 @@ using System.IO;
 using System.Text;
 using UnityEditor;
 using UnityEngine;
-using CmrUnityGameFramework.Runtime;
+using CmrUnityFramework.Runtime;
 
-namespace CmrUnityGameFramework.Editor
+namespace CmrUnityFramework.Editor
 {
     [CustomEditor(typeof(WebRequestComponent))]
     internal sealed class WebRequestComponentInspector : GameFrameworkInspector

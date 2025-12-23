@@ -1,7 +1,7 @@
 using CmrGameFramework.UI;
 using System;
 using UnityEngine;
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     public sealed class UIForm :MonoBehaviour,IUIForm
     {

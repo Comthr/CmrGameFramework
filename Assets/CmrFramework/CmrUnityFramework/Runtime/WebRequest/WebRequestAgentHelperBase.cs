@@ -2,7 +2,7 @@
 using System;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// Web 请求代理辅助器基类。

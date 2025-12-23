@@ -1,7 +1,7 @@
 using CmrGameFramework.UI;
 using System;
 using UnityEngine;
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 界面组辅助器基类。

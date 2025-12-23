@@ -1,6 +1,6 @@
 using CmrGameFramework.Resource;
 using UnityEngine;
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     public abstract class ResourceHelperBase : MonoBehaviour, IResourceHelper
     {

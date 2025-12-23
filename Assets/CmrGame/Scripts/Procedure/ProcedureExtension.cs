@@ -1,16 +1,21 @@
 using CmrGameFramework.Procedure;
-using CmrUnityGameFramework.Runtime;
+using CmrUnityFramework.Runtime;
 using ProcedureOwner = CmrGameFramework.Fsm.IFsm<CmrGameFramework.Procedure.IProcedureManager>;
 namespace CmrGame
 {
     public static class ProcedureExtension
     {
-        public static void SetSceneData(this ProcedureBase procedure, ProcedureOwner owner, EScene scene)
+        private const string nextSceneId = "id";
+        public static void SetNextScene(this ProcedureBase procedure, ProcedureOwner owner, E_Scene scene)
         {
-            CmrGameFramework.DataTable.IDataTable<DRScene> x = GameEntry.DataTable.GetDataTable<DRScene>();
-            int nextSceneId = GameEntry.DataTable.GetDataTable<DRScene>().GetDataRow((int)scene).Id;
-            owner.SetData<VarInt32>("nextSceneId", nextSceneId);
+            owner.SetData<VarInt32>(nextSceneId, (int)scene);
+        }
+
+        public static string GetSceneName(this ProcedureBase procedure, ProcedureOwner owner)
+        {
+            int sceneId = owner.GetData<VarInt32>(nextSceneId);
+
+            return ((E_Scene)sceneId).ToString();
         }
     }
-
 }

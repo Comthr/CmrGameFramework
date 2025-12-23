@@ -2,7 +2,7 @@ using CmrGameFramework;
 using CmrGameFramework.DataNode;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 数据结点组件。

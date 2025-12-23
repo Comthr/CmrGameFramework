@@ -3,7 +3,7 @@ using CmrGameFramework.ObjectPool;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 对象池组件。

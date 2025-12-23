@@ -1,7 +1,7 @@
-using CmrUnityGameFramework.Runtime;
+using CmrUnityFramework.Runtime;
 using UnityEditor;
 
-namespace CmrUnityGameFramework.Editor
+namespace CmrUnityFramework.Editor
 {
     [CustomEditor(typeof(EventComponent))]
     internal sealed class EventComponentInspector : GameFrameworkInspector

@@ -3,7 +3,7 @@ using CmrGameFramework.Setting;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// ÓÎÏ·ÅäÖÃ×é¼þ¡£
@@ -15,7 +15,7 @@ namespace CmrUnityGameFramework.Runtime
         private ISettingManager m_SettingManager = null;
 
         [SerializeField]
-        private string m_SettingHelperTypeName = "CmrUnityGameFramework.Runtime.DefaultSettingHelper";
+        private string m_SettingHelperTypeName = "CmrUnityFramework.Runtime.DefaultSettingHelper";
 
         [SerializeField]
         private SettingHelperBase m_CustomSettingHelper = null;

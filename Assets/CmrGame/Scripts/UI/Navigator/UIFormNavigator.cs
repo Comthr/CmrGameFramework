@@ -1,4 +1,4 @@
-using CmrUnityGameFramework.Runtime;
+using CmrUnityFramework.Runtime;
 using UnityEngine;
 
 namespace CmrGame

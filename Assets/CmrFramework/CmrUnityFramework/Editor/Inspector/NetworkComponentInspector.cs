@@ -1,10 +1,10 @@
 ﻿using CmrGameFramework;
 using CmrGameFramework.Network;
-using CmrUnityGameFramework.Runtime;
+using CmrUnityFramework.Runtime;
 using UnityEditor;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Editor
+namespace CmrUnityFramework.Editor
 {
     [CustomEditor(typeof(NetworkComponent))]
     internal sealed class NetworkComponentInspector : GameFrameworkInspector

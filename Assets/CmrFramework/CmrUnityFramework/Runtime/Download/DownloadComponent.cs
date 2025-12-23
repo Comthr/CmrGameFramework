@@ -3,7 +3,7 @@ using CmrGameFramework.Download;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 下载组件。
@@ -22,7 +22,7 @@ namespace CmrUnityGameFramework.Runtime
         private Transform m_InstanceRoot = null;
 
         [SerializeField]
-        private string m_DownloadAgentHelperTypeName = "CmrUnityGameFramework.Runtime.UnityWebRequestDownloadAgentHelper";
+        private string m_DownloadAgentHelperTypeName = "CmrUnityFramework.Runtime.UnityWebRequestDownloadAgentHelper";
 
         [SerializeField]
         private DownloadAgentHelperBase m_CustomDownloadAgentHelper = null;

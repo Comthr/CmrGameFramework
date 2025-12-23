@@ -1,4 +1,4 @@
-﻿namespace CmrUnityGameFramework.Runtime
+﻿namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 默认声音组辅助器。

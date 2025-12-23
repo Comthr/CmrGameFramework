@@ -1,7 +1,7 @@
 ﻿using CmrGameFramework.Entity;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 实体组辅助器基类。

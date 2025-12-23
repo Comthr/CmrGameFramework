@@ -4,7 +4,7 @@ using System;
 using System.IO;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 安卓文件系统流。

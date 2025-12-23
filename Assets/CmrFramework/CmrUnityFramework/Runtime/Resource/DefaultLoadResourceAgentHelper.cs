@@ -7,7 +7,7 @@ using CmrGameFramework.Resource;
 using CmrGameFramework.FileSystem;
 using CmrGameFramework;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 默认加载资源代理辅助器。

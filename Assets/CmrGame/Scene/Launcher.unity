@@ -349,7 +349,6 @@ MonoBehaviour:
   - CmrGame.ProcedureLaunch
   - CmrGame.ProcedureMenu
   - CmrGame.ProcedurePreload
-  - CmrGame.ProcedureSplash
   m_EntranceProcedureTypeName: CmrGame.ProcedureLaunch
 --- !u!1 &793787885
 GameObject:
@@ -486,7 +485,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45152fd61faa7c24ea354f7211bc641d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _globalSettings: {fileID: 11400000, guid: 70a28e7ba42506b4bb784e52aeaf32e3, type: 2}
 --- !u!1 &900533569
 GameObject:
   m_ObjectHideFlags: 0

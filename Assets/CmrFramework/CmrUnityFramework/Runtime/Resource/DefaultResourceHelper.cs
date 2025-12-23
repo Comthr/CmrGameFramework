@@ -5,7 +5,7 @@ using UnityEngine;
 using CmrGameFramework.Resource;
 using System.Collections;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// Ä¬ÈÏ×ÊÔ´¸¨ÖúÆ÷¡£

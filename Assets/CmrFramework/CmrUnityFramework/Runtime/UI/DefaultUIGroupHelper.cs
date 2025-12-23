@@ -1,5 +1,5 @@
 using System;
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 默认界面组辅助器。

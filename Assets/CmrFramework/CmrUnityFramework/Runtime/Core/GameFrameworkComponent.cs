@@ -1,5 +1,5 @@
 using UnityEngine;
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary> 游戏框架组件抽象类 </summary>
     public class GameFrameworkComponent : MonoBehaviour

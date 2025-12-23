@@ -1,9 +1,9 @@
 ﻿using CmrGameFramework;
 using CmrGameFramework.DataTable;
-using CmrUnityGameFramework.Runtime;
+using CmrUnityFramework.Runtime;
 using UnityEditor;
 
-namespace CmrUnityGameFramework.Editor
+namespace CmrUnityFramework.Editor
 {
     [CustomEditor(typeof(DataTableComponent))]
     internal sealed class DataTableComponentInspector : GameFrameworkInspector

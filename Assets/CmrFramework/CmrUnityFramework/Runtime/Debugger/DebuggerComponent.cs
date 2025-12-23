@@ -3,7 +3,7 @@ using CmrGameFramework.Debugger;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 调试器组件。

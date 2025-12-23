@@ -1,11 +1,11 @@
 using CmrGameFramework.Procedure;
-using CmrUnityGameFramework.Runtime;
+using CmrUnityFramework.Runtime;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
-namespace CmrUnityGameFramework.Editor
+namespace CmrUnityFramework.Editor
 {
     [CustomEditor(typeof(ProcedureComponent))]
     internal sealed class ProcedureComponentInspector : GameFrameworkInspector

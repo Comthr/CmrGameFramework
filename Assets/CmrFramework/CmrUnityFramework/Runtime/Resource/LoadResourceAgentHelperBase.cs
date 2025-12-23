@@ -3,7 +3,7 @@ using CmrGameFramework.Resource;
 using System;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 加载资源代理辅助器基类。

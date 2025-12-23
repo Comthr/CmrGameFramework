@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Data;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 数据表组件。
@@ -27,7 +27,7 @@ namespace CmrUnityGameFramework.Runtime
         private bool m_EnableLoadDataTableDependencyAssetEvent = false;
 
         [SerializeField]
-        private string m_DataTableHelperTypeName = "CmrUnityGameFramework.Runtime.DefaultDataTableHelper";
+        private string m_DataTableHelperTypeName = "CmrUnityFramework.Runtime.DefaultDataTableHelper";
 
         [SerializeField]
         private DataTableHelperBase m_CustomDataTableHelper = null;

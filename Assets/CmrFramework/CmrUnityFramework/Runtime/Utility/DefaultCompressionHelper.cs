@@ -3,7 +3,7 @@ using ICSharpCode.SharpZipLib.GZip;
 using System;
 using System.IO;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 默认压缩解压缩辅助器。

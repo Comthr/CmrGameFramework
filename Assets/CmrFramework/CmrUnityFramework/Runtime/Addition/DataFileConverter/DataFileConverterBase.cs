@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     public abstract class DataFileConverterBase
     {

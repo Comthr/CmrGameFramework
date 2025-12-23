@@ -4,7 +4,7 @@ using System;
 using UnityEngine.Networking;
 using Utility = CmrGameFramework.Utility;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 使用 UnityWebRequest 实现的下载代理辅助器。

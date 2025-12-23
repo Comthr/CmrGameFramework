@@ -1,7 +1,7 @@
 ﻿using CmrGameFramework.FileSystem;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 文件系统辅助器基类。

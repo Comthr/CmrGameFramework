@@ -1,5 +1,5 @@
 ﻿using CmrGameFramework;
-using CmrUnityGameFramework.Runtime;
+using CmrUnityFramework.Runtime;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,7 +7,7 @@ using System.Text;
 using UnityEditor;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Editor
+namespace CmrUnityFramework.Editor
 {
     [CustomEditor(typeof(ReferencePoolComponent))]
     internal sealed class ReferencePoolComponentInspector : GameFrameworkInspector

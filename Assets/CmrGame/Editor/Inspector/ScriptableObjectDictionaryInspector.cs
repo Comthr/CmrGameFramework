@@ -3,7 +3,7 @@ using UnityEngine;
 namespace CmrGame
 {
 
-    [CustomPropertyDrawer(typeof(ScriptableObjectDictionary<EScene,string>))]
+    [CustomPropertyDrawer(typeof(ScriptableObjectDictionary<E_Scene,string>))]
     public class ScriptableObjectDictionaryDrawer : PropertyDrawer
     {
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)

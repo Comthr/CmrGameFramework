@@ -1,7 +1,7 @@
 using CmrGameFramework;
 using System.Diagnostics;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 日志工具集。

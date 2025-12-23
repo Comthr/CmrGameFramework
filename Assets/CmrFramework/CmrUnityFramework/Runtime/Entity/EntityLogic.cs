@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 实体逻辑基类。

@@ -2,7 +2,7 @@
 using CmrGameFramework.Event;
 using System;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 显示实体失败事件。

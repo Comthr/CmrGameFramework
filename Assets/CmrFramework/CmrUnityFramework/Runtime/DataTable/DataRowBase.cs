@@ -1,7 +1,7 @@
 ﻿using CmrGameFramework.DataTable;
 using System;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 数据表行基类。

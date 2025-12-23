@@ -2,7 +2,7 @@
 using CmrGameFramework.Event;
 using CmrGameFramework.Sound;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 播放声音更新事件。

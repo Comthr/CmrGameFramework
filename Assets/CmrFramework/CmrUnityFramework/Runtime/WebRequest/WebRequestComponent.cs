@@ -3,7 +3,7 @@ using CmrGameFramework.WebRequest;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// Web 请求组件。
@@ -21,7 +21,7 @@ namespace CmrUnityGameFramework.Runtime
         private Transform m_InstanceRoot = null;
 
         [SerializeField]
-        private string m_WebRequestAgentHelperTypeName = "CmrUnityGameFramework.Runtime.UnityWebRequestAgentHelper";
+        private string m_WebRequestAgentHelperTypeName = "CmrUnityFramework.Runtime.UnityWebRequestAgentHelper";
 
         [SerializeField]
         private WebRequestAgentHelperBase m_CustomWebRequestAgentHelper = null;

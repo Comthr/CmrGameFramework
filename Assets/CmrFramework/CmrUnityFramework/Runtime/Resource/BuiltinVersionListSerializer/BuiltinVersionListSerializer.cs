@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 内置版本资源列表序列化器。

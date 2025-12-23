@@ -3,7 +3,7 @@ using CmrGameFramework.Event;
 using CmrGameFramework.Network;
 using System.Net.Sockets;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 网络错误事件。

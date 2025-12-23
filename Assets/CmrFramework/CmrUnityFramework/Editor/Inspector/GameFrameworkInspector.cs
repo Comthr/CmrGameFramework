@@ -1,5 +1,5 @@
 using UnityEditor;
-namespace CmrUnityGameFramework.Editor
+namespace CmrUnityFramework.Editor
 {
     /// <summary>
     /// ÓÎÏ·¿ò¼Ü Inspector ³éÏóÀà¡£

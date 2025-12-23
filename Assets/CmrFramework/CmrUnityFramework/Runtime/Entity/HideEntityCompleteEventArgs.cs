@@ -2,7 +2,7 @@
 using CmrGameFramework.Entity;
 using CmrGameFramework.Event;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 隐藏实体完成事件。

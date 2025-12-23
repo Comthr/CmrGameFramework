@@ -1,6 +1,6 @@
 using CmrGameFramework.Event;
 using CmrGameFramework.Procedure;
-using CmrUnityGameFramework.Runtime;
+using CmrUnityFramework.Runtime;
 using ProcedureOwner = CmrGameFramework.Fsm.IFsm<CmrGameFramework.Procedure.IProcedureManager>;
 
 namespace CmrGame
@@ -9,6 +9,7 @@ namespace CmrGame
     {
         private MenuForm m_MenuForm = null;
         private bool m_IsStart;
+        private E_Scene m_SceneToLoad = E_Scene.None;
         protected override void OnEnter(ProcedureOwner procedureOwner)
         {
             base.OnEnter(procedureOwner);
@@ -35,7 +36,8 @@ namespace CmrGame
             base.OnUpdate(procedureOwner, elapseSeconds, realElapseSeconds);
             if(m_IsStart)
             {
-                this.SetSceneData(procedureOwner, EScene.Game);
+                //Todo:在这里
+                //this.SetNextScene(procedureOwner, E_Scene.Game);
                 ChangeState<ProcedureChangeScene>(procedureOwner);
             }
         }
@@ -53,7 +55,6 @@ namespace CmrGame
         public void StartGame()
         {
             m_IsStart = true;
-            //关闭其他？
         }
     }
 }

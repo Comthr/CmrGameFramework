@@ -1,7 +1,7 @@
 using CmrGameFramework;
 using CmrGameFramework.Event;
 using CmrGameFramework.Procedure;
-using CmrUnityGameFramework.Runtime;
+using CmrUnityFramework.Runtime;
 using System.Collections.Generic;
 using System.Data;
 using ProcedureOwner = CmrGameFramework.Fsm.IFsm<CmrGameFramework.Procedure.IProcedureManager>;
@@ -52,7 +52,7 @@ namespace CmrGame
                 if (!loadedFlag.Value)
                     return;
             }
-            this.SetSceneData(procedureOwner,EScene.Menu);
+            this.SetNextScene(procedureOwner,E_Scene.Menu);
             ChangeState<ProcedureChangeScene>(procedureOwner);
         }
 

@@ -3,7 +3,7 @@ using CmrGameFramework.Localization;
 using CmrGameFramework.Resource;
 using System;
 using UnityEngine;
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     [DisallowMultipleComponent]
     [AddComponentMenu("CmrFramework/Base")]
@@ -20,19 +20,19 @@ namespace CmrUnityGameFramework.Runtime
         private Language m_EditorLanguage = Language.Unspecified;
 
         [SerializeField]
-        private string m_TextHelperTypeName = "CmrUnityGameFramework.Runtime.DefaultTextHelper";
+        private string m_TextHelperTypeName = "CmrUnityFramework.Runtime.DefaultTextHelper";
 
         [SerializeField]
-        private string m_VersionHelperTypeName = "CmrUnityGameFramework.Runtime.DefaultVersionHelper";
+        private string m_VersionHelperTypeName = "CmrUnityFramework.Runtime.DefaultVersionHelper";
 
         [SerializeField]
-        private string m_LogHelperTypeName = "CmrUnityGameFramework.Runtime.DefaultLogHelper";
+        private string m_LogHelperTypeName = "CmrUnityFramework.Runtime.DefaultLogHelper";
 
         [SerializeField]
-        private string m_CompressionHelperTypeName = "CmrUnityGameFramework.RuntimeDefaultCompressionHelper";
+        private string m_CompressionHelperTypeName = "CmrUnityFramework.RuntimeDefaultCompressionHelper";
 
         [SerializeField]
-        private string m_JsonHelperTypeName = "CmrUnityGameFramework.Runtime.DefaultJsonHelper";
+        private string m_JsonHelperTypeName = "CmrUnityFramework.Runtime.DefaultJsonHelper";
 
         [SerializeField]
         private int m_FrameRate = 30;

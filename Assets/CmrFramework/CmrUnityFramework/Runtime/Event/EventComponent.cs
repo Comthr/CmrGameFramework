@@ -2,7 +2,7 @@ using CmrGameFramework;
 using CmrGameFramework.Event;
 using System;
 using UnityEngine;
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 事件组件。

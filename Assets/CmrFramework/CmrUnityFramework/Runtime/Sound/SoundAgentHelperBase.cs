@@ -3,7 +3,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Audio;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 声音代理辅助器基类。

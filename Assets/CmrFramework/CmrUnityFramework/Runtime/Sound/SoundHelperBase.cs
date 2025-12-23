@@ -1,7 +1,7 @@
 ﻿using CmrGameFramework.Sound;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 声音辅助器基类。

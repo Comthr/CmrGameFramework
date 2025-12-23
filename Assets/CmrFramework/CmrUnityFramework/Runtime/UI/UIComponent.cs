@@ -5,7 +5,7 @@ using CmrGameFramework.UI;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CmrUnityGameFramework.Runtime
+namespace CmrUnityFramework.Runtime
 {
     /// <summary>
     /// 界面组件。
@@ -52,13 +52,13 @@ namespace CmrUnityGameFramework.Runtime
         private Transform m_InstanceRoot = null;
 
         [SerializeField]
-        private string m_UIFormHelperTypeName = "CmrUnityGameFramework.Runtime.DefaultUIFormHelper";
+        private string m_UIFormHelperTypeName = "CmrUnityFramework.Runtime.DefaultUIFormHelper";
 
         [SerializeField]
         private UIFormHelperBase m_CustomUIFormHelper = null;
 
         [SerializeField]
-        private string m_UIGroupHelperTypeName = "CmrUnityGameFramework.Runtime.DefaultUIGroupHelper";
+        private string m_UIGroupHelperTypeName = "CmrUnityFramework.Runtime.DefaultUIGroupHelper";
 
         [SerializeField]
         private UIGroupHelperBase m_CustomUIGroupHelper = null;
