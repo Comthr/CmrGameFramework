@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 419269abcd14f554599c099865787aa8, type: 3}
   m_Name: LobbyConfigSO
   m_EditorClassIdentifier: 
-  AvailablePhases: []
-  DefaultPhase: 
+  BelongSession: 1
+  AvailablePhases:
+  - Lobby.LibraryPhase
+  DefaultPhase: Lobby.LibraryPhase

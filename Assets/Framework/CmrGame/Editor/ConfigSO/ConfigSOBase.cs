@@ -7,6 +7,6 @@ namespace CmrGame.Editor
     /// </summary>
     public abstract class ConfigSOBase : ScriptableObject
     {
-        //public string Description;
+        public E_GameSession BelongSession = E_GameSession.Lobby;
     }
 }

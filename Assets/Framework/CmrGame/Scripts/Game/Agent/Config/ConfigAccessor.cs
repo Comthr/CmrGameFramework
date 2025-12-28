@@ -1,4 +1,7 @@
-﻿namespace CmrGame
+﻿using System.Collections.Generic;
+using System.Linq;
+
+namespace CmrGame
 {
     /// <summary>
     /// 配置访问器基类
@@ -45,25 +48,66 @@
         protected int[] GetIntArray(string key)
         {
             string raw = Agent.GetString(GroupName, key, "");
-            return ConfigConverter.ParseIntArray(raw);
+            return ParseIntArray(raw);
         }
 
         protected float[] GetFloatArray(string key)
         {
             string raw = Agent.GetString(GroupName, key, "");
-            return ConfigConverter.ParseFloatArray(raw);
+            return ParseFloatArray(raw);
         }
 
         protected string[] GetStringArray(string key)
         {
             string raw = Agent.GetString(GroupName, key, "");
-            return ConfigConverter.ParseStringArray(raw);
+            return ParseStringArray(raw);
         }
 
         protected bool[] GetBoolArray(string key)
         {
             string raw = Agent.GetString(GroupName, key, "");
-            return ConfigConverter.ParseBoolArray(raw);
+            return ParseBoolArray(raw);
+        }
+
+        private const char SEPARATOR = '|';
+
+        public static int[] ParseIntArray(string value)
+        {
+            if (string.IsNullOrEmpty(value)) return new int[0];
+            return value.Split(SEPARATOR)
+                .Select(s => int.TryParse(s, out var v) ? v : 0)
+                .ToArray();
+        }
+
+        public static float[] ParseFloatArray(string value)
+        {
+            if (string.IsNullOrEmpty(value)) return new float[0];
+            return value.Split(SEPARATOR)
+                .Select(s => float.TryParse(s, out var v) ? v : 0f)
+                .ToArray();
+        }
+
+        public static string[] ParseStringArray(string value)
+        {
+            if (string.IsNullOrEmpty(value)) 
+                return new string[0];
+            return value.Split(SEPARATOR);
+        }
+
+        public static bool[] ParseBoolArray(string value)
+        {
+            if (string.IsNullOrEmpty(value)) 
+                return new bool[0];
+            return value.Split(SEPARATOR)
+                .Select(s => bool.TryParse(s, out var v) ? v : false)
+                .ToArray();
+        }
+
+        public static string SaveArray<T>(IEnumerable<T> list)
+        {
+            if (list == null) 
+                return "";
+            return string.Join(SEPARATOR.ToString(), list);
         }
     }
 }

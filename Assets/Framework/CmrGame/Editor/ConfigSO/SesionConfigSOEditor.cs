@@ -62,7 +62,7 @@ namespace CmrGame.Editor
             serializedObject.ApplyModifiedProperties();
 
             // 5. 绘制代码生成按钮
-            ConfigSOEditor.DrawCodeGeneration(target as ConfigSOBase);
+            ConfigSOEditor.DrawConfigToolkit(target as ConfigSOBase);
         }
 
         /// <summary>
